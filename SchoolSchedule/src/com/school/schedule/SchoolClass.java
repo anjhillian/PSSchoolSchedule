@@ -31,7 +31,4 @@ public class SchoolClass {
 		return day;
 	}
 	
-	
-
-
 }
