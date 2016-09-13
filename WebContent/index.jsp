@@ -15,16 +15,46 @@
 </HEAD>
 
 <BODY>
-	<FORM action="/SchoolSchedule/Schedule" method="post">
-		Course Name: <INPUT type="text" name="title" size="35"><BR>
-		Course Time: Sun<INPUT type="checkbox" name="day" value="sun">
-		Mon<INPUT type="checkbox" name="day" value="mon"> Tue<INPUT
-			type="checkbox" name="day" value="tue"> Wed<INPUT
-			type="checkbox" name="day" value="wed"> Thu<INPUT
-			type="checkbox" name="day" value="thu"> Fri<INPUT
-			type="checkbox" name="day" value="fri"> Sat<INPUT
-			type="checkbox" name="day" value="sat"> <SELECT
-			name="starttime">
+ <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">TeamTAE</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+           
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+
+<div class="container">
+<br><br><br><br>
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-body">
+    <p>
+    	<FORM action="/SchoolSchedule/Schedule" method="post">
+		<b>Course Name: </b><INPUT type="text" class="form-control" name="title" size="35"><BR>
+		<b>Course Time: </b>
+		Sun <INPUT type="checkbox" name="day" value="sun">
+		Mon <INPUT type="checkbox" name="day" value="mon"> 
+		Tue <INPUT type="checkbox" name="day" value="tue"> 
+		Wed <INPUT type="checkbox" name="day" value="wed"> 
+		Thu <INPUT type="checkbox" name="day" value="thu"> 
+		Fri <INPUT type="checkbox" name="day" value="fri"> 
+		Sat 
+		<INPUT type="checkbox" name="day" value="sat"> 
+		
+		<SELECT name="starttime">
 			<OPTION value="8">8:00am</OPTION>
 			<OPTION value="9">9:00am</OPTION>
 			<OPTION value="10">10:00am</OPTION>
@@ -54,12 +84,14 @@
 			<OPTION value="20">8:00pm</OPTION>
 			<OPTION value="21">9:00pm</OPTION>
 			<OPTION value="22">10:00pm</OPTION>
-		</SELECT> <BR> <BR> <INPUT type="submit" name="Submit"
-			value="Add Course">
+		</SELECT> <BR> <BR> <INPUT class="btn btn-success" type="submit" name="Submit"
+			value="Add Course"> 
 	</FORM>
+    </p>
+  </div>
 
-<div class="container">
-	<TABLE class="table table-striped" >
+  <!-- Table -->
+  <TABLE class="table table-striped table-hover" >
 		<TBODY>
 			<TR>
 				<TH align="center" valign="middle" width="80"></TH>
@@ -91,7 +123,8 @@
 									test="${clazz.startTime <= time 
 && clazz.endTime > time 
 && clazz.day == day}">
-									<c:out value="${clazz.title}" />
+									<span class="label label-success"><c:out value="${clazz.title}" /></span>
+									
 								</c:if>
 							</c:forEach></TD>
 					</c:forEach>
@@ -99,6 +132,11 @@
 			</c:forEach>
 		</TBODY>
 	</TABLE>
+</div>
+	
+</div>
+
+	
 
 </BODY>
 </HTML>
