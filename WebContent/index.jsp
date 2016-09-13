@@ -5,6 +5,13 @@
 <HTML>
 <HEAD>
 <TITLE>Student Schedule</TITLE>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
 </HEAD>
 
 <BODY>
@@ -51,7 +58,8 @@
 			value="Add Course">
 	</FORM>
 
-	<TABLE border="1" cellspacing="0">
+<div class="container">
+	<TABLE class="table table-striped" >
 		<TBODY>
 			<TR>
 				<TH align="center" valign="middle" width="80"></TH>

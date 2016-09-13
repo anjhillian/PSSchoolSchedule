@@ -79,7 +79,7 @@ public class ScheduleServlet extends HttpServlet {
 		}
 
 		request.getSession().setAttribute("schoolschedule", schedule);
-		getServletContext().getRequestDispatcher("/Schedule.jsp").forward(
+		getServletContext().getRequestDispatcher("/index.jsp").forward(
 				request, response);
 	}
 
