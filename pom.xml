@@ -6,6 +6,7 @@
   <packaging>war</packaging>
   
   <build>
+    <finalName>${project.artifactId}</finalName>
     <sourceDirectory>src</sourceDirectory>
     <plugins>
       <plugin>
