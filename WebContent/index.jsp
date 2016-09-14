@@ -12,6 +12,19 @@
 <!-- Optional theme -->
 <link rel="stylesheet" href="css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
+<script>
+function myFunction() {
+    document.getElementById("clear") 
+    	
+    <% 
+    System.out.println("hello");
+    %>
+    
+ 
+  //window.location.reload();
+    
+}
+</script>
 </HEAD>
 
 <BODY>
@@ -84,14 +97,24 @@
 			<OPTION value="20">8:00pm</OPTION>
 			<OPTION value="21">9:00pm</OPTION>
 			<OPTION value="22">10:00pm</OPTION>
-		</SELECT> <BR> <BR> <INPUT class="btn btn-success" type="submit" name="Submit"
-			value="Add Course"> 
+		</SELECT> <BR> <BR> 
+		<INPUT class="btn btn-success" type="submit" name="Submit" value="Add Course"> 
+		<button class="btn btn-info" type="button" onclick="document.getElementById('demo').innerHTML = Date()">Display Date and Time</button>
+			
+<br><br>
+
+<div class="alert alert-info alert-dismissible" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <strong>Info: </strong> <p id="demo"></p>
+</div>
+
 	</FORM>
+	
     </p>
   </div>
 
   <!-- Table -->
-  <TABLE class="table table-striped table-hover" >
+  <TABLE class="table table-striped table-hover table-bordered" >
 		<TBODY>
 			<TR>
 				<TH align="center" valign="middle" width="80"></TH>
@@ -123,9 +146,11 @@
 									test="${clazz.startTime <= time 
 && clazz.endTime > time 
 && clazz.day == day}">
-									<span class="label label-success"><c:out value="${clazz.title}" /></span>
+									<c:out value="${clazz.title}" />
 									
 								</c:if>
+								
+								
 							</c:forEach></TD>
 					</c:forEach>
 				</TR>
@@ -137,6 +162,6 @@
 </div>
 
 	
-
+<script type="text/javascript" src="js/bootstrap.min.js" ></script>
 </BODY>
 </HTML>
