@@ -12,19 +12,7 @@
 <!-- Optional theme -->
 <link rel="stylesheet" href="css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-<script>
-function myFunction() {
-    document.getElementById("clear") 
-    	
-    <% 
-    System.out.println("hello");
-    %>
-    
- 
-  //window.location.reload();
-    
-}
-</script>
+
 </HEAD>
 
 <BODY>
